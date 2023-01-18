@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+ <html lang="id">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>www.tugas_3.com</title>
+ </head>
+ <body>
+    <header class="judul-tugas3">
+        <h1>Tugas 3 TRS Pelatihan Node.js Lanjutan</h1>
+    </header>
+    <main class="main-tugas3"></main>
+    <footer class="footer-tugas3">@Copyright 2023 Tigana Reymansyah</footer>
+    <script>
+        fetch("/api/trs")
+        .then((response) => response.text())
+        .then((data) => {
+            const div = document.querySelector(".main-tugas3");
+            const p = document.createElement("p");
+            p.textContent = data;
+            div.appendChild(p);
+        });
+    </script>
+ </body>
+ </html>
